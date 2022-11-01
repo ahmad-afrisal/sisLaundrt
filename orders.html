@@ -55,6 +55,7 @@
 
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
+
     <!-- Page CSS -->
 
     <!-- Helpers -->
@@ -63,6 +64,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    
   </head>
 
   <body>
@@ -141,7 +143,7 @@
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
@@ -157,8 +159,8 @@
             </li>
 
             <!-- Order -->
-            <li class="menu-item">
-              <a href="index.html" class="menu-link">
+            <li class="menu-item active">
+              <a href="orders.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-cart-alt"></i>
                 <div data-i18n="Analytics">Order</div>
               </a>
@@ -251,19 +253,10 @@
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <a class="dropdown-item" href="login.html">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
@@ -282,25 +275,213 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-                <div class="col-lg-12 mb-4 order-0">
-                  <div class="card" style="height:75vh; background-image: url('../assets/img/backgrounds/bg.jpg'); background-size: cover;">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-12">
-                        <div class="card-body text-center mt-5">
-                          <h1 class="card-title text-primary">Selamat datang di <br>SISLAUNDRY</h1>
-                          <!-- <p class="mb-4">
-                            You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
-                            your profile.
-                          </p> -->
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Orders</h4>
 
-                          <a href="dashboard.html" class="btn  btn-primary">Get Started</a>
+              <!-- Basic Bootstrap Table -->
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h5 class="mb-0">List Order</h5>
+                  <div class="d-grid gap-2 d-md-block float-end">
+                    <button class="btn btn-outline-primary" type="button">Export</button>
+                    <a href="create_order.html" class="btn btn-primary" >Add New Order</a>
+                  </div>
+                </div>
+
+
+                
+                    <div class="card-body demo-vertical-spacing demo-only-element">
+                      <div class="input-group input-group-merge">
+                        <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search..."
+                          aria-label="Search..."
+                          aria-describedby="basic-addon-search31"
+                        />
+                      </div>
+                      <!-- <a href="" class="btn btn-primary">Tambah Data</a> -->
+                    </div>
+                <div class="table-responsive text-nowrap">
+                  <table class="table" id="example" >
+                    <thead>
+                      <tr>
+                        <th>Detail</th>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>No HP</th>
+                        <th>Status</th>
+                        <th>Alamat</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>
+                          <button type="button" class="btn btn-sm rounded-pill btn-icon btn-outline-primary" data-bs-toggle="modal"
+                          data-bs-target="#basicModal">
+                            <span class="tf-icons bx bx-plus-circle"></span>
+                          </button>
+                        </td>
+                        <td><strong>1</strong></td>
+                        <td>Yovita</td>
+                        <td>085341995xxx</td>
+                        <td><span class="badge bg-label-success me-1">Penjemuran</span></td>
+                        <td>Seturan</td>
+                        <td>23 Oct 2022</td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="edit_order.html"
+                                ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-1"></i> Delete</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button type="button" class="btn btn-sm rounded-pill btn-icon btn-outline-primary"  data-bs-toggle="modal"
+                          data-bs-target="#basicModal">
+                            <span class="tf-icons bx bx-plus-circle"></span>
+                          </button>
+                        </td>
+                        <td><strong>2</strong></td>
+                        <td>Lisa </td>
+                        <td>085341995xxx</td>
+                        <td><span class="badge bg-label-primary me-1">Cuci</span></td>
+                        <td>Sleman</td>
+                        <td>23 Oct 2022</td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="edit_order.html"
+                                ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-1"></i> Delete</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <button type="button" class="btn btn-sm rounded-pill btn-icon btn-outline-primary">
+                            <span class="tf-icons bx bx-plus-circle"></span>
+                          </button>
+                        </td>
+                        <td><strong>3</strong></td>
+                        <td>Eka Putri</td>
+                        <td>085341995xxx</td>
+                        <td><span class="badge bg-label-warning me-1">Setrika</span></td>
+                        <td>CondongCatur</td>
+                        <td>24 Oct 2022</td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="edit_order.html"
+                                ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                              >
+                              <a class="dropdown-item" href="javascript:void(0);"
+                                ><i class="bx bx-trash me-1"></i> Delete</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                  </table>
+                  
+                  
+                </div>
+                <div class="row">
+                  <div class="col-6 mt-4"><p class="ms-3">Showing 1 to 7 of 100 entries</p></div>
+                  <div class="col-6"> <nav aria-label="Page navigation" class="me-3 mt-3">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item prev">
+                        <a class="page-link" href="javascript:void(0);"
+                          ><i class="tf-icon bx bx-chevrons-left"></i
+                        ></a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:void(0);">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:void(0);">2</a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link" href="javascript:void(0);">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:void(0);">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="javascript:void(0);">5</a>
+                      </li>
+                      <li class="page-item next">
+                        <a class="page-link" href="javascript:void(0);"
+                          ><i class="tf-icon bx bx-chevrons-right"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </nav></div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="basicModal" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel1">Detail ID : 10</h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col mb-3">
+                            <label for="nameBasic" class="form-label">Name</label>
+                            <input type="text" id="nameBasic" class="form-control" placeholder="Enter Name" />
+                          </div>
+                        </div>
+                        <div class="row g-2">
+                          <div class="col mb-0">
+                            <label for="emailBasic" class="form-label">Email</label>
+                            <input type="text" id="emailBasic" class="form-control" placeholder="xxxx@xxx.xx" />
+                          </div>
+                          <div class="col mb-0">
+                            <label for="dobBasic" class="form-label">DOB</label>
+                            <input type="text" id="dobBasic" class="form-control" placeholder="DD / MM / YY" />
+                          </div>
                         </div>
                       </div>
+                      <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
                     </div>
                   </div>
                 </div>
+               
               </div>
+              <!--/ Basic Bootstrap Table -->
             </div>
             <!-- / Content -->
 
@@ -350,6 +531,7 @@
 
     <!-- Page JS -->
     <script src="../assets/js/dashboards-analytics.js"></script>
+
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
