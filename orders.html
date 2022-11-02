@@ -142,49 +142,24 @@
           <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item">
-              <a href="index.html" class="menu-link">
+            <li class="menu-item active">
+              <a href="dashboard.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
 
-            <!-- Costumer -->
-            <li class="menu-item">
-              <a href="customers.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bxs-user-detail"></i>
-                <div data-i18n="Analytics">Costumer</div>
-              </a>
-            </li>
-
             <!-- Order -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="orders.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-cart-alt"></i>
                 <div data-i18n="Analytics">Order</div>
               </a>
             </li>
-
-            <!-- Service -->
-            <li class="menu-item">
-              <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bxs-discount"></i>
-                <div data-i18n="Analytics">Service</div>
-              </a>
-            </li>
-
-            <!-- Profile -->
-            <li class="menu-item">
-              <a href="index.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bxs-user-account"></i>
-                <div data-i18n="Analytics">Profile</div>
-              </a>
-            </li>
-
+            
             <!-- Logout -->
             <li class="menu-item">
-              <a href="index.html" class="menu-link">
+              <a href="login.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-log-out-circle"></i>
                 <div data-i18n="Analytics">Logout</div>
               </a>
@@ -286,9 +261,6 @@
                     <a href="create_order.html" class="btn btn-primary" >Add New Order</a>
                   </div>
                 </div>
-
-
-                
                     <div class="card-body demo-vertical-spacing demo-only-element">
                       <div class="input-group input-group-merge">
                         <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
@@ -307,12 +279,12 @@
                     <thead>
                       <tr>
                         <th>Detail</th>
-                        <th>No</th>
+                        <th>ID</th>
                         <th>Nama</th>
                         <th>No HP</th>
-                        <th>Status</th>
-                        <th>Alamat</th>
                         <th>Tanggal</th>
+                        <th>Status</th>
+                        <th>Pesan</th>
                         <th>Aksi</th>
                       </tr>
                     </thead>
@@ -327,9 +299,16 @@
                         <td><strong>1</strong></td>
                         <td>Yovita</td>
                         <td>085341995xxx</td>
-                        <td><span class="badge bg-label-success me-1">Penjemuran</span></td>
-                        <td>Seturan</td>
                         <td>23 Oct 2022</td>
+                        <td><span class="badge bg-label-success me-1">Sudah Diambil</span></td>
+                        <td>
+                          <a href="" class="btn rounded-pill btn-icon btn-success">
+                            <span class="tf-icons bx bxl-whatsapp"></span>
+                          </a>
+                          <a href="" class="btn rounded-pill btn-icon btn-info">
+                            <span class="tf-icons bx bxl-whatsapp"></span>
+                          </a>
+                        </td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -356,9 +335,16 @@
                         <td><strong>2</strong></td>
                         <td>Lisa </td>
                         <td>085341995xxx</td>
-                        <td><span class="badge bg-label-primary me-1">Cuci</span></td>
-                        <td>Sleman</td>
                         <td>23 Oct 2022</td>
+                        <td><span class="badge bg-label-primary me-1">Masuk</span></td>
+                        <td>
+                          <a href="" class="btn rounded-pill btn-icon btn-success">
+                            <span class="tf-icons bx bxl-whatsapp"></span>
+                          </a>
+                          <a href="" class="btn rounded-pill btn-icon btn-info">
+                            <span class="tf-icons bx bxl-whatsapp"></span>
+                          </a>
+                        </td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -384,9 +370,16 @@
                         <td><strong>3</strong></td>
                         <td>Eka Putri</td>
                         <td>085341995xxx</td>
-                        <td><span class="badge bg-label-warning me-1">Setrika</span></td>
-                        <td>CondongCatur</td>
                         <td>24 Oct 2022</td>
+                        <td><span class="badge bg-label-warning me-1">Proses</span></td>
+                        <td>
+                          <button type="button" class="btn rounded-pill btn-icon btn-success">
+                            <span class="tf-icons bx bxl-whatsapp"></span>
+                          </button>
+                          <button type="button" class="btn rounded-pill btn-icon btn-info">
+                            <span class="tf-icons bx bxl-whatsapp"></span>
+                          </button>
+                        </td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -403,13 +396,11 @@
                           </div>
                         </td>
                       </tr>
-                  </table>
-                  
-                  
+                  </table>           
                 </div>
-                <div class="row">
-                  <div class="col-6 mt-4"><p class="ms-3">Showing 1 to 7 of 100 entries</p></div>
-                  <div class="col-6"> <nav aria-label="Page navigation" class="me-3 mt-3">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-6 mt-4"><p class="ms-3">Showing 1 to 7 of 100 entries</p></div>
+                  <div class="col-12 col-lg-6"> <nav aria-label="Page navigation" class="me-3 mt-3">
                     <ul class="pagination justify-content-end">
                       <li class="page-item prev">
                         <a class="page-link" href="javascript:void(0);"
